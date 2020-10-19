@@ -1,0 +1,270 @@
+#main-wrapper {
+  width: 600px;
+  margin-top: 50px;
+  margin-left: 30%;
+  background: white;
+  padding: 5px;
+  border-radius: 10px;
+  position: absolute;
+  box-shadow: 0px 0px 40px;
+}
+
+#main-wrapper2 {
+  width: 600px;
+  margin-top: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 20px;
+  margin-left: 30%;
+  position: absolute;
+  box-shadow: 0px 0px 40px;
+}
+
+#image {
+  padding: 20px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.logo {
+  height: 50px;
+  width: 150px;
+  position: absolute;
+  bottom: 0px;
+}
+.avatar {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.myform {
+  width: 450px;
+  margin: 0 auto;
+}
+
+.inputvalues {
+  width: 90%;
+  color: #666666;
+  background: #e6e6e6;
+  font-weight: bold;
+  border-radius: 100px;
+  line-height: 1.5;
+  border: none;
+  font-size: medium;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline-width: 0;
+  letter-spacing: 1px;
+}
+
+#sidebox {
+  height: 200px;
+  width: 250px;
+  background-color: white;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 40px;
+}
+
+#login_btn {
+  margin-top: 10px;
+  background-color: #00b894;
+  padding: 5px;
+  color: white;
+  width: 30%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border: #00b894 solid;
+  border-radius: 100px;
+  outline-width: 0;
+}
+
+#register_btn {
+  margin-bottom: 20px;
+  background-color: #d63031;
+  padding: 5px;
+  color: white;
+  width: 30%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border: #d63031 solid;
+  border-radius: 100px;
+  outline-width: 0;
+}
+
+#signup_btn {
+  margin-top: 10px;
+  background-color: #00b894;
+  padding: 10px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 100px;
+  border: #00b894;
+  outline-width: 0;
+}
+
+#backlg_btn {
+  margin-bottom: 20px;
+  background-color: #d63031;
+  padding: 5px;
+  color: white;
+  width: 30%;
+
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 100px;
+  border: #d63031;
+  outline-width: 0;
+}
+
+#add_btn {
+  margin-bottom: 20px;
+  background-color: #00b894;
+  padding: 5px;
+  color: white;
+  width: 40%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  outline-width: 0;
+}
+
+#post_btn {
+  margin-bottom: 20px;
+  background-color: #2ed573;
+  padding: 5px;
+  color: white;
+  width: 40%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: #2ed573 solid;
+  outline-width: 0;
+}
+
+#hunt_btn {
+  margin-bottom: 20px;
+  background-color: #ff4757;
+  padding: 5px;
+  color: white;
+  width: 40%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: #ff4757 solid;
+  outline-width: 0;
+}
+
+#logout_btn {
+  margin-bottom: 20px;
+  background-color: #d63031;
+  padding: 5px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: #d63031 solid;
+  outline-width: 0;
+}
+
+#newt_btn {
+  margin-bottom: 20px;
+  background-color: #0984e3;
+  padding: 5px;
+  color: white;
+  width: 40%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  outline-width: 0;
+}
+
+#viewh_btn {
+  margin-bottom: 20px;
+  background-color: #0984e3;
+  padding: 5px;
+  color: white;
+  width: 40%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  outline-width: 0;
+}
+
+#sub_btn {
+  margin-bottom: 20px;
+  background-color: #b33771;
+  padding: 5px;
+  color: white;
+  width: 40%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: #b33771 solid;
+  outline-width: 0;
+}
+
+#results {
+  margin-bottom: 20px;
+  background-color: #32ff7e;
+  padding: 5px;
+  color: white;
+  width: 40%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: #32ff7e solid;
+  outline-width: 0;
+}
+
+#add_btn {
+  background-color: #ff3838;
+  border: #ff3838 solid;
+  width: 25%;
+  border-radius: 100px;
+  outline-width: 0;
+}
+
+#curuser {
+  height: 250px;
+  width: 220px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px 0px 40px;
+}
+
+#login_btn:hover,
+#register_btn:hover,
+#signup_btn:hover,
+#backlg_btn:hover,
+#add_btn:hover,
+#post_btn:hover,
+#hunt_btn:hover,
+#sub_btn:hover,
+#logout_btn:hover,
+#add_btn:hover,
+#results:hover {
+  background-color: #aaa69d;
+  border: #aaa69d solid;
+  box-shadow: 0px 0px 40px grey;
+  color: black;
+}
