@@ -68,7 +68,8 @@ require 'dbconfig/config.php';
                     $query_run = mysqli_query($con, $query);
 
                     if ($query_run) {
-                        echo '<script type="text/javascript"> alert("User Registered!Go to Login page to login!") </script>';
+                        echo '<script type="text/javascript"> alert("User Registered!") </script>';
+                        echo '<script>window.location.href = "./index.php";</script>';
                     } else {
                         echo '<script type="text/javascript"> alert("Error!") </script>';
                     }
@@ -81,7 +82,7 @@ require 'dbconfig/config.php';
         ?>
 
 
-        <form class="myform" action="register.php" method="post" enctype="multipart/form-data">
+        <form class="myform" action="register.php" method="post" enctype="multipart/form-data" autocomplete="off">
 
             <input name="fname" type="text" class="inputvalues" style="margin-top:25px;margin-bottom:15px;"
                 placeholder="Enter your Full Name" required /> <br>

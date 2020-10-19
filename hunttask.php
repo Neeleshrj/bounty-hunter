@@ -6,42 +6,7 @@ require 'dbconfig/config.php';
 ?>
 <?php require "templates/header2.php"; ?>
 
-
-<table>
-
-    <tr>
-        <th>Task ID</th>
-        <th>Work description</th>
-        <th>Time</th>
-        <th>City</th>
-        <th>Money</th>
-        <th>Status</th>
-    </tr>
-    <?php
-  if (isset($_POST['submit'])) {
-    $username = $_SESSION['username'];
-    $loc = $_POST['city'];
-    if (isset($_POST['submit'])) {
-      $sql = "SELECT * from taskinfo WHERE city='$loc' AND status='pending' AND t_userid != '$username' ";
-
-      $result = mysqli_query($con, $sql);
-
-      if (mysqli_num_rows($result) > 0) {
-
-        // output data of each row
-        while ($row = mysqli_fetch_assoc($result)) {
-          echo "<tr><td>" . $row["taskid"] . "</td><td>" . $row["w_desc"] . "</td><td>" . $row["toc"] . "</td><td>" .
-            $row["city"] . "</td><td>" . $row["money"] . "</td><td>" . $row["status"] . "</td></tr>";
-        }
-      } else {
-        echo "No results!";
-      }
-    }
-  }
-  ?>
-
-
-    <?php
+<?php
   if (isset($_POST['add'])) {
     $taskid = $_POST['taskid'];
     $userid = $_SESSION['username'];
@@ -55,7 +20,51 @@ require 'dbconfig/config.php';
   }
   ?>
 
-</table>
+
+<div id="top">
+    <?php
+  if (isset($_POST['submit'])) {
+    $username = $_SESSION['username'];
+    $loc = $_POST['city'];
+    if (isset($_POST['submit'])) {
+      $sql = "SELECT * from taskinfo WHERE city='$loc' AND status='pending' AND t_userid != '$username' ";
+
+      $result = mysqli_query($con, $sql);
+
+      while($row = mysqli_fetch_assoc($result)) { ?>
+    <center>
+        <div id="taskbox">
+            <h3>TaskId:</h3>
+            <h4><?php echo $row["taskid"]?></h4>
+            <h3>Description:</h3>
+            <p><?php echo $row["w_desc"]?></p>
+            <h3>Image:</h3>
+            <div>
+                <?php 
+                if($row["image"]=="blank"){
+                  echo "No image Attached";
+                }else{
+                  echo "<img id='images' src='uploaded-images/".$row["image"]."'/>";
+                }
+              
+              ?>
+            </div>
+            <h3>Time Of Completion:</h3>
+            <p><?php echo $row["toc"]?></p>
+            <h3>City:</h3>
+            <p><?php echo $row["city"]?></p>
+            <h3>Reward:</h3>
+            <p><?php echo $row["money"]?></p>
+        </div>
+    </center>
+    <?php }
+        
+    }
+  }
+      ?>
+
+
+</div>
 
 <h4>Find tasks based on location -></h4>
 
@@ -72,33 +81,23 @@ require 'dbconfig/config.php';
         style="width: 15%;padding:10px" required />
 
     <input type="submit" name="add" id="add_btn" value="Hunt" />
-    <p>Note->This is process cannot be reverted.</p>
+    <p>Note->This process cannot be reverted.</p>
 </form>
 
 <br><a href=" huntmenu.php">Back to home</a>
 
 <?php include "templates/footer2.php"; ?>
 
-
 <style>
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th,
-td {
-    padding: 8px;
+#taskbox {
+    width: 400px;
+    border: black solid 1px;
+    padding: 20px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
 }
 
-tr:hover {
-    background-color: #f5f5f5;
-}
-
-th {
-    background-color: #00008b;
-    color: white;
+#images {
+    width: 250px;
+    height: 200px;
 }
 </style>
